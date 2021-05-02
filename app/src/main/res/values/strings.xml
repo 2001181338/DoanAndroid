@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Xe ôm công nghệ</string>
+    <string name="trang_chu">Trang chủ</string>
+    <string name="lich_su">Lịch sử</string>
+    <string name="tai_khoan">Tài khoản</string>
+    <string name="ngan_hang">Ngân hàng</string>
+    <string name="diem_den">Điểm đến</string>
+    <string name="dat_xe">Đặt xe</string>
+</resources>
