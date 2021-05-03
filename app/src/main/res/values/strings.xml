@@ -27,7 +27,7 @@
     <string name="gia_tien_value">50.000VNĐ </string>
     <string name="thoi_gian_value">17/04/2021 </string>
 
-<!--    Khách hàng-->
+    <!--    Khách hàng-->
     <string name="edit">Chỉnh sửa</string>
     <string name="address">Địa chỉ: </string>
     <string name="phonenumber">Số điện thoại: </string>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange">
+
+    <TextView
+        android:id="@+id/txtDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Đăng ký tài khoản"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTaiKhoan"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@android:drawable/edit_text"
+
+        android:drawablePadding="4dp"
+        android:ems="10"
+        android:hint="Tài khoản"
+        android:inputType="textPersonName"
+        android:padding="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDangKy" />
+
+    <EditText
+        android:id="@+id/edtMatKhau"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+
+        android:drawablePadding="4dp"
+        android:ems="10"
+        android:hint="Mật khẩu"
+        android:inputType="textPersonName"
+        android:padding="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/edtTaiKhoan"
+        app:layout_constraintStart_toStartOf="@id/edtTaiKhoan"
+        app:layout_constraintTop_toBottomOf="@id/edtTaiKhoan" />
+
+    <EditText
+        android:id="@+id/edtHoTen"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+
+        android:drawablePadding="4dp"
+        android:ems="10"
+        android:hint="Họ tên"
+        android:inputType="textPassword"
+        android:padding="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/edtMatKhau"
+        app:layout_constraintStart_toStartOf="@id/edtMatKhau"
+        app:layout_constraintTop_toBottomOf="@id/edtMatKhau" />
+
+    <EditText
+        android:id="@+id/edtSoDienThoai"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+
+        android:drawablePadding="4dp"
+        android:ems="10"
+        android:hint="Số điện thoại"
+        android:inputType="textPassword"
+        android:padding="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/edtHoTen"
+        app:layout_constraintStart_toStartOf="@id/edtHoTen"
+        app:layout_constraintTop_toBottomOf="@id/edtHoTen" />
+
+    <EditText
+        android:id="@+id/edtHinhDaiDien"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:drawablePadding="4dp"
+        android:ems="10"
+        android:hint="Hình đại diện"
+        android:inputType="textPassword"
+        android:padding="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/edtSoDienThoai"
+        app:layout_constraintStart_toStartOf="@id/edtSoDienThoai"
+        app:layout_constraintTop_toBottomOf="@id/edtSoDienThoai" />
+
+    <Button
+        android:id="@+id/btnSingin"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/red"
+        android:padding="18dp"
+        android:text="Đăng Ký"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/edtHinhDaiDien"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/edtHinhDaiDien"
+        app:layout_constraintTop_toBottomOf="@+id/edtHinhDaiDien" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,54 +21,51 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    FrameLayout frameLayout;
-    BottomNavigationView bottomNavigationView;
-    Fragment currentFragment;
+    EditText taiKhoan;
+    EditText matKhau;
+    Button btnDangNhap, btnDangKy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.dangnhap);
 
         //Ánh xạ
-        frameLayout = findViewById(R.id.frameLayout);
-        bottomNavigationView = findViewById(R.id.menuBottom);
+        taiKhoan = findViewById(R.id.edtName);
+        matKhau = findViewById(R.id.edtPass);
+        btnDangNhap = findViewById(R.id.btnDangNhap);
+        btnDangKy = findViewById(R.id.btnDangKy);
 
-
-        //Load fragment main
-        LoadFragment(new Fragment_TrangChu());
-
-        //Event Selection Item Menu
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch (id){
-                    case R.id.trangChu:
-                        currentFragment = new Fragment_TrangChu();
-                        break;
-                    case R.id.lichSu:
-                        currentFragment = new LichSuChuyenDi_Fragment();
-                        break;
-                    case R.id.taiKhoan:
-                        currentFragment = new FragmentThongTinKhachHang();
-                        break;
-                    case R.id.nganHang:
-                        currentFragment = new TaiKhoanNganHangFragment();
-                        break;
+            public void onClick(View v) {
+                String tk = taiKhoan.getText().toString().toLowerCase();
+                String mk = matKhau.getText().toString().toLowerCase();
+
+                Intent intent = new Intent(MainActivity.this, TrangChuActivity.class);
+
+                startActivity(intent);
+                if( tk == "thin" && mk == "thin"){
+//                    Intent intent = new Intent(MainActivity.this, TrangChuActivity.class);
+//
+//                    startActivity(intent);
                 }
-                LoadFragment(currentFragment);
-                return true;
+                else{
+                    Toast.makeText(MainActivity.this, "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btnDangKy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DangKyActivity.class);
+
+                startActivity(intent);
             }
         });
 
     }
 
 
-    protected void LoadFragment(Fragment fragment)
-    {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frameLayout, fragment);
-        transaction.commit();
-    }
 }
