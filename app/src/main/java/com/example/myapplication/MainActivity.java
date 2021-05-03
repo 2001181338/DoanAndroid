@@ -10,15 +10,17 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     FrameLayout frameLayout;
-    EditText timKiem;
     BottomNavigationView bottomNavigationView;
     Fragment currentFragment;
 
@@ -29,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Ánh xạ
         frameLayout = findViewById(R.id.frameLayout);
-        timKiem = findViewById(R.id.timKiem);
         bottomNavigationView = findViewById(R.id.menuBottom);
+
 
         //Load fragment main
         LoadFragment(new Fragment_TrangChu());
@@ -45,10 +47,13 @@ public class MainActivity extends AppCompatActivity {
                         currentFragment = new Fragment_TrangChu();
                         break;
                     case R.id.lichSu:
+                        currentFragment = new LichSuChuyenDi_Fragment();
                         break;
                     case R.id.taiKhoan:
+                        currentFragment = new FragmentThongTinKhachHang();
                         break;
                     case R.id.nganHang:
+                        currentFragment = new TaiKhoanNganHangFragment();
                         break;
                 }
                 LoadFragment(currentFragment);

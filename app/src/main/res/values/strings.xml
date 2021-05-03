@@ -6,4 +6,32 @@
     <string name="ngan_hang">Ngân hàng</string>
     <string name="diem_den">Điểm đến</string>
     <string name="dat_xe">Đặt xe</string>
+    <string name="txt18">18</string>
+
+    <!--    Lịch sử chuyến đi và đặt cước-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="CamOn_KhachHang">Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</string>
+    <string name="TB_Thoi_Gian_TaiXe_Den">Tài xế đang đến trong </string>
+    <string name="ten_tai_xe">Nguyễn Văn A</string>
+    <string name="diem_di">Điểm đi: </string>
+    <string name="so_km">Số km: </string>
+    <string name="gia_tien">Giá tiền: </string>
+    <string name="thoi_gian">Thời gian: </string>
+    <string name="tai_xe">Tài xế: </string>
+    <string name="khach_hang">Khách hàng: </string>
+
+
+    <string name="diem_di_value">85 Nguyễn Văn Bảo, Phường 5, Gò Vấp</string>
+    <string name="diem_den_value">85 Cộng hòa, Phường 5, Tân Bình</string>
+    <string name="so_km_value">10 </string>
+    <string name="gia_tien_value">50.000VNĐ </string>
+    <string name="thoi_gian_value">17/04/2021 </string>
+
+<!--    Khách hàng-->
+    <string name="edit">Chỉnh sửa</string>
+    <string name="address">Địa chỉ: </string>
+    <string name="phonenumber">Số điện thoại: </string>
+    <string name="customer">Loại khách: </string>
+    <string name="save">Lưu</string>
+    <string name="thank">CẢM ƠN BẠN ĐÃ GIÚP CHUYẾN ĐI THÀNH CÔNG</string>
 </resources>

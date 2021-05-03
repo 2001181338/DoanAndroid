@@ -2,11 +2,21 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/timKiem"
+        android:hint="@string/diem_den"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:drawablePadding="5dp"
+        android:textSize="18dp"
+        />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:id="@+id/back_ground"
         android:src="@drawable/background"
+        android:layout_below="@id/timKiem"
         />
     <RelativeLayout
         android:layout_width="120dp"

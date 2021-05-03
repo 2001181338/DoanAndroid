@@ -6,21 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/timKiem"
-        android:hint="@string/diem_den"
-        android:drawableRight="@drawable/ic_baseline_search_24"
-        android:drawablePadding="5dp"
-        android:textSize="18sp"
-        />
+
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/timKiem"
         android:layout_above="@id/menuBottom"
         android:orientation="horizontal"
         >
